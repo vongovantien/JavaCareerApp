@@ -1,8 +1,7 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<h1 class="text-center text-danger">Chi tiết bài tuyển dụng</h1>
+
+
 <div class="row">
     <div class="col-md-6">
         <c:choose>

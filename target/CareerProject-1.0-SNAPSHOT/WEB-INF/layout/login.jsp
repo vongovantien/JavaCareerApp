@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Aug 22, 2021, 8:46:27 AM
-    Author     : duonghuuthanh
---%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
