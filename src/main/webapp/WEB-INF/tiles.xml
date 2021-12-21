@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="baseLayout" template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="..." />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+        <put-attribute name="content" value="..." />
+    </definition>
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content" value="/WEB-INF/layout/index.jsp" />
+    </definition> 
+    <definition name="post-detail" extends="baseLayout">
+        <put-attribute name="title" value="CHi tiết bài viết" />
+        <put-attribute name="content" value="/WEB-INF/layout/post-detail.jsp" />
+    </definition> 
+    <definition name="employer-detail" extends="baseLayout">
+        <put-attribute name="title" value="Thông tin nhà tuyển dụng" />
+        <put-attribute name="content" value="/WEB-INF/layout/employer-detail.jsp" />
+    </definition>
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Đăng nhập hệ thống" />
+        <put-attribute name="content" value="/WEB-INF/layout/admin/login.jsp" />
+    </definition>
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="Đăng ký người dùng" />
+        <put-attribute name="content" value="/WEB-INF/layout/admin/register.jsp" />
+    </definition> 
+    
+     
+       
+    <definition name="baseAdminLayout" template="/WEB-INF/layout/base-admin.jsp">
+        <put-attribute name="title" value="Quản trị hệ thống tuyển dụng" />
+        <put-attribute name="left" value="/WEB-INF/layout/admin-left.jsp" />
+        <put-attribute name="content" value="..." />
+    </definition>
+    <definition name="cate-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê bài đăng theo ngành nghề" />
+        <put-attribute name="content" value="/WEB-INF/layout/admin/cate-stats.jsp" />
+    </definition> 
+    <definition name="year-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê bài đăng trong năm" />
+        <put-attribute name="content" value="/WEB-INF/layout/admin/year-stats.jsp" />
+    </definition> 
+    <definition name="date-stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Thống kê bài đăng theo ngày tháng" />
+        <put-attribute name="content" value="/WEB-INF/layout/admin/date-stats.jsp" />
+    </definition> 
+</tiles-definitions>
