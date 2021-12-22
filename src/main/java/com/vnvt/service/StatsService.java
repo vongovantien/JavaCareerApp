@@ -6,11 +6,19 @@
 package com.vnvt.service;
 
 import com.vnvt.repository.*;
+import java.util.Date;
+import java.util.List;
 
 /**
  *
  * @author 18510
  */
 public interface StatsService {
-    
+
+    List<Object[]> cateStats();
+
+    List<Object[]> postStats(String kw, Date fromDate, Date toDate);
+
+    List<Object[]> postMonthStats(String kw, Date fromDate, Date toDate);
+
 }

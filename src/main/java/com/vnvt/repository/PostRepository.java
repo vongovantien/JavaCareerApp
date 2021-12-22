@@ -14,15 +14,15 @@ import java.util.List;
  */
 public interface PostRepository {
 
-    List<Post> getProducts(String kw, int page);
+    List<Post> getPosts(String kw, int page);
 
-    List<Object[]> getHotProducts(int num);
+    List<Object[]> getHotPosts(int num);
 
-    List<Object[]> getMostDiscussProducts(int num);
+    List<Object[]> getMostDiscussPosts(int num);
 
-    Post getProductById(int productId);
+    Post getPostById(int postId);
 
-    long countProduct();
+    long countPost();
 
     boolean addOrUpdate(Post post);
 }

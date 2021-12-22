@@ -16,7 +16,7 @@ public interface StatsRepository {
 
     List<Object[]> cateStats();
 
-    List<Object[]> productStats(String kw, Date fromDate, Date toDate);
+    List<Object[]> postStats(String kw, Date fromDate, Date toDate);
 
-    List<Object[]> productMonthStats(String kw, Date fromDate, Date toDate);
+    List<Object[]> postMonthStats(String kw, Date fromDate, Date toDate);
 }

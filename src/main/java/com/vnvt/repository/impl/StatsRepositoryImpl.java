@@ -21,12 +21,12 @@ public class StatsRepositoryImpl implements StatsRepository{
     }
 
     @Override
-    public List<Object[]> productStats(String kw, Date fromDate, Date toDate) {
+    public List<Object[]> postStats(String kw, Date fromDate, Date toDate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Object[]> productMonthStats(String kw, Date fromDate, Date toDate) {
+    public List<Object[]> postMonthStats(String kw, Date fromDate, Date toDate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

@@ -5,12 +5,19 @@
  */
 package com.vnvt.service;
 
-import com.vnvt.repository.*;
+import com.vnvt.pojo.User;
+import java.util.List;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
  *
  * @author 18510
  */
 public interface UserService {
-    
+
+    User getUserById(int id);
+
+    boolean addUser(User user);
+
+    List<User> getUsers(String username);
 }

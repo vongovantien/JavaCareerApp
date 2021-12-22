@@ -7,16 +7,36 @@ package com.vnvt.repository.impl;
 
 import com.vnvt.pojo.Comment;
 import com.vnvt.repository.CommentRepository;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author 18510
  */
-public class CommentRepositoryImpl implements CommentRepository{
+@Repository
+@Transactional
+public class CommentRepositoryImpl implements CommentRepository {
+
+    @Autowired
+    private LocalSessionFactoryBean sessionFactory;
 
     @Override
     public Comment addComment(Comment c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        try {
+            session.save(c);
+
+            return c;
+        } catch (HibernateException ex) {
+            ex.printStackTrace();
+        }
+
+        return null;
     }
-    
+
 }

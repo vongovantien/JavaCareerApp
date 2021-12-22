@@ -4,9 +4,12 @@
  */
 package com.vnvt.controller;
 
+import com.vnvt.service.EmployerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  *
@@ -15,9 +18,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class EmployerController {
 
-    @GetMapping("/employers")
-    public String detail(Model model){
-        
+@Autowired
+    private EmployerService employerService;
+
+    @GetMapping("/employers/{employerId}")
+    public String employerDetail(Model model, @PathVariable(value = "employerId") int employerId) {
+        model.addAttribute("employer", this.employerService.getEmployerById(employerId));
+
         return "employer-detail";
     }
 }
